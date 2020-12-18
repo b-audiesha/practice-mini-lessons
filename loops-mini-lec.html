@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+
+
+<script>
+ /* Do/While/For*/
+
+/*While Loops*/
+
+ /*var i = 0;
+
+ while (i < 10) {
+   console.log('while loop iteration #' + i);
+   i++;
+ }
+
+ var i = 0;
+
+ while (i <= 10) {
+   console.log('while loop iteration #' + i);
+   i++;*/
+/* }*/
+ /* this code will run until i =10 at 9 the loop will never run. */
+
+
+/*this will be undefined because 10 cannot be less than 10*/
+
+/* while (i > 10) {
+   console.log('while loop iteration #' + i);
+   i++;
+ }*/
+
+ /*Password While Loop
+
+ var password = "Open Sesame";
+ var guess = "";
+ while(guess !== password) {
+   guess = prompt("Please enter the password.");
+ }*/
+
+/*decerementing*/
+/* this loop will never run because X will never be less than 5 because it is 10.*/
+/* var x = 10;
+ while (x < 5) {
+   console.log(x);
+   x--;
+ }*/
+
+ /*this will be undefined because 10 cannot be less than 10*/
+
+/*Do while setup*/
+
+/* do {
+   //body
+ } while(/!*condition*!/);*/
+
+ /*example do while loop*/
+/* var i = 10;
+
+ do {
+   console.log('while loop iteration #' + i);
+   i++;
+ } while (i < 10);*/
+
+
+/*infinite loop with escape condition*/
+
+/*
+ var x = 5;
+ while(x !==4) {
+   x++;
+   console.log(x);
+
+   if (x===10) {
+     break;
+   }
+ }
+*/
+
+ /*Do While Loops*/
+
+/*let i = 10;
+
+ do {
+   console.log('while loop iteration #' + i);
+   i++;
+ } while (i < 10);*/
+
+
+/* Breaking out of a loop*/
+
+
+ for (var i = 1; i < 100; i++) {
+
+   console.log('Loop counter is: ' + i);
+
+   if (i === numberToStopAt) {
+     console.log('We have reached the stopping point: break!');
+     // use the break keyword to exit from the while loop
+     break;
+     // nothing after the break will get processed
+     console.log('You will never see this line.');
+   }
+ }
+
+ for (var i = 1; i < 100; i++) {
+
+   if (i % 2 !== 0) {
+     // number isn't even
+     // odd numbers aren't as cool
+     // skip the rest of the loop and continue with the next iteration
+     continue;
+   }
+
+   console.log('Here is a lovely even number: ' + i);
+ }
+
+
+</script>
+</body>
+</html>

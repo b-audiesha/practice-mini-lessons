@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Morning Warmups</title>
+</head>
+<body>
+<h1>Open your console to see the results!</h1>
+<script>
+  // Write a JavaScript function that takes in a number and returns the number multiplied by 5.
+
+  function multiplyNumberByFive(num) {
+    return num * 5;
+  }
+
+  // console.log(multiplyNumberByFive(5));
+
+  //     Write a function that sings “Happy Birthday”
+  // Make it sing to whoever’s birthday it is
+
+  function singHappyBirthday(name) {
+    console.log("Happy Birthday to You,");
+    console.log("Happy Birthday to You,");
+    console.log("Happy Birthday Dear " + name);
+    console.log("Happy Birthday to You!!!");
+  }
+
+  // singHappyBirthday("Vanessa");
+
+  // Write a js function that will take in a number and from there count the next 5 numbers
+
+  function countUp5(num){
+    for (let i=0;i<5;i++) {
+      console.log(num+i);
+    }
+  }
+
+  // countUp5(5);
+
+  // Write a function that returns the number 7.
+  function returnsSeven() {
+    return 7;
+  }
+
+  // console.log(returnsSeven());
+
+
+  // Write a JavaScript function that returns the length of a string passed through it.
+
+  function lengthOfString(string) {
+    return string.length;
+  }
+
+  // console.log(lengthOfString("Howdy Codeup!"));
+
+  // Write a JavaScript function that returns the number of characters in a string passed through it.
+
+  function numberOfCharactersInString(str) {
+    return lengthOfString(str);
+  }
+
+  // console.log(lengthOfString("Howdy Codeup!"));
+
+  // Write a JavaScript function that will return the diameter of a circle with a radius of the circle passed through it.
+  function diameterOfCircle(radius) {
+    return radius * 2;
+  }
+
+  // console.log(diameterOfCircle(returnsSeven()));
+
+
+  // Write a JavaScript function that returns the square root of the number passed through it.
+
+  function squareRoot(num) {
+    return Math.sqrt(num);
+  }
+
+  // console.log(squareRoot(100));
+
+  //     Write a JS function that returns the argument passed.
+  function returnArgument(param) {
+    return param;
+  }
+
+  // console.log(returnArgument("Hello Hyperion! Hope you had a great weekend!"));
+
+  // Write a JS function that returns a string representing the type of the argument passed through it.
+
+  function typeOfInput(input) {
+    return typeof input;
+  }
+
+  // console.log(typeOfInput(34));
+  // console.log(typeOfInput("Craig"));
+
+  // Write a JavaScript function that returns the boolean true if a number passed through it is even.
+
+  function isEven(num) {
+    return num % 2 === 0;
+  }
+
+  // console.log(isEven(44));
+  // console.log(isEven(37));
+
+  // console.log(2);
+  // console.log(4);
+  // console.log(6);
+  // console.log(8);
+
+  // var num = 2;
+  // console.log(num);
+  // num+=2;
+  // console.log(num);
+  // num+=2;
+  // console.log(num);
+  // num+=2;
+  // console.log(num);
+  // var nums = [2,4,6,8];
+  // nums.forEach(function(num) {
+  //     console.log(num);
+  // })
+
+  const printEvens = function () {
+    console.log(2);
+    console.log(4);
+    console.log(6);
+    console.log(8);
+
+    // for (let i = 1; i <= 20; i++) {
+    //     if (i % 2 === 0) {
+    //         console.log(i);
+    //     }
+    // }
+  }
+  // printEvens();
+  // printEvens();
+  // printEvens();
+
+  // Write a function that takes 2 parameters. Starting at the first and counting by the second, will output 5 steps.
+  const countFromBy = function(num1, num2) {
+    console.log(num1);
+    console.log(num1 + num2);
+    console.log(num1 + 2 * num2);
+    console.log(num1 + 3 * num2);
+    console.log(num1 + 4 * num2);
+  }
+
+  // countFromBy(2, 4);
+  // let luckyNumber = parseFloat(prompt("What is your lucky number 1 - 8?"));
+  let luckyNumber = Math.floor((Math.random() * 8) + 1)
+
+  function magic8Ball(luckyNumber) {
+    switch(luckyNumber) {
+      case 1:
+        return ("As I see it, yes");
+      case 2:
+        return ("Ask again later");
+      case 3:
+        return ("Better not tell you now");
+      case 4:
+        return ("Cannot predict now");
+      case 5:
+        return ("Concentrate and ask again");
+      case 6:
+        return ("Don't count on it");
+      case 7:
+        return ("Outlook not so good");
+      case 8:
+        return ("Outlook is good");
+    }
+  }
+
+  // alert(magic8Ball(luckyNumber));
+
+  let lights = "on";
+  let lightswitch = function() {
+    if (lights === "on") {
+      lights = "off";
+    } else {
+      lights = "on";
+    }
+  }
+
+  // console.log("lights are " + lights);
+  // lightswitch();
+  // console.log("lights are now " + lights);
+
+  var countTo10 = function() {
+    var num = 1;
+    while (num <= 10) {
+      if (num % 2 === 0) {
+        console.log(num + " is even");
+      } else {
+        console.log(num + " is odd");
+      }
+      num++;
+    }
+  }
+
+  // countTo10();
+</script>
+<!--    <script src="js/fizzbuzz.js"></script>-->
+<!--    <script src="js/fibonacci.js"></script>-->
+<script>
+  const isolateTensDigit = function (threeDigitNum) {
+    threeDigitNum %= 100;
+    threeDigitNum /= 10;
+    threeDigitNum = Math.floor(threeDigitNum);
+    return threeDigitNum;
+  }
+  // console.log(isolateTensDigit(345));
+  // console.log(isolateTensDigit(678));
+
+  // Write a function that will return an array passed sorted in reverse alphabetical order, when passed an array of strings. It should return null if any element within the array is not a string.
+
+  function revAlphaArray(arr) {
+    for (let j = 0; j < arr.length; j++) {
+      if (typeof arr[j] !== "string") {
+        return null;
+      }
+    }
+    return arr.sort().reverse();
+  }
+
+  // console.log(revAlphaArray([0]));
+  // console.log(revAlphaArray(["Prim", "Imar", "Rima", "Mary"]));
+
+  // Write a JavaScript function that takes in two arguments, and returns whether the first argument is even divisible by the second argument, or not. Non-number arguments should have the function return null.
+  function evenlyDivisible(num1, num2) {
+    if (typeof num1 === "number" && typeof num2 === "number") {
+      return num1 % num2 === 0;
+    } else {
+      return null;
+    }
+  }
+
+  // console.log(evenlyDivisible(21, 7));
+  // console.log(evenlyDivisible("Day", "Night"));
+
+
+  // Write a function that returns “fizz”, “buzz”, or “fizzbuzz” based on the conditions of the famous FizzBuzz exercise. Any number that doesn’t match these conditions should return the number passed. Any non-number passed should have the function return null.
+
+  function fizzOrBuzz(num) {
+    if (typeof num !== "number") {
+      return null
+    } else if (num % 3 === 0 && num % 5 === 0) {
+      return "FizzBuzz";
+    } else if (num % 3 === 0) {
+      return "Fizz";
+    } else if (num % 5 === 0) {
+      return "Buzz";
+    } else {
+      return num;
+    }
+  }
+
+  // console.log(fizzOrBuzz(6));
+  // console.log(fizzOrBuzz(55));
+  // console.log(fizzOrBuzz(45));
+  // console.log(fizzOrBuzz(17));
+  // console.log(fizzOrBuzz("Dale"));
+  // console.log(fizzOrBuzz(null));
+
+  // Write a JavaScript function that takes in a length in inches (a number), and converts it to a string listing the length in feet and inches. (Example: 78 => 6’6”). Non-number arguments should have the function return null.
+
+  function inchesToHeight (num) {
+    if (typeof num === "number") {
+      return Math.floor(num / 12) + "'" + (num % 12) + "\"";
+    } else {
+      return null;
+    }
+  }
+
+  // console.log(inchesToHeight(86));
+  // console.log(inchesToHeight(73));
+  // console.log(inchesToHeight("Bobcat"));
+
+  // Write a function that takes in a string and returns the number of words in the string. Non-string inputs should return null.
+
+  function numOfWords(str) {
+    if (typeof str === "string") {
+      return str.split(" ").length;
+    } else {
+      return null;
+    }
+  }
+
+  // console.log(numOfWords("Hakeem Olajuwon is a good good basketball player."));
+  // console.log(numOfWords(false));
+
+  // Using the reduce method, set a variable for the element from the array of hamsters that has the largest heightInMM property.
+
+  const hamsters = [
+    {
+      name: "Hamtaro",
+      heightInMM: 86,
+      fur: ['orange', 'white'],
+      gender: "male",
+      dateOfBirth: "August 6"
+    } , {
+      name: "Bijou",
+      heightInMM: 75,
+      fur: ['white'],
+      gender: "female",
+      dateOfBirth: "July 10"
+    } , {
+      name: "Oxnard",
+      heightInMM: 100,
+      fur: ['grey', 'white'],
+      gender: "male",
+      dateOfBirth: "May 3"
+    } , {
+      name: "Boss",
+      heightInMM: 120,
+      fur: ['brown', 'white'],
+      gender: "male",
+      dateOfBirth: "Spetember 21"
+    } , {
+      name: "Snoozer",
+      heightInMM: 85,
+      fur: ['brown', 'white', "pink"],
+      gender: "male",
+      dateOfBirth: "January 14"
+    }
+  ];
+
+  let tallestHamHam = hamsters.reduce((tallHamster, hamHam) => {
+    if (hamHam.heightInMM > tallHamster.heightInMM) {
+      return hamHam;
+    } else {
+      return tallHamster;
+    }
+  }, {heightInMM: 0});
+
+  console.log(tallestHamHam);
+
+</script>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Loops Activity</title>
+</head>
+<body>
+
+
+<script>
+  // //**********WHILE PRACTICE 1****************
+// // !! make a loop to go from 20 to 50 with increments of ten !!
+
+/*
+let count = 20;
+
+while (count <= 60) {
+  document.writeln("looping away!");
+
+  count = count + 10;
+}
+*/
+
+// //**********WHILE PRACTICE 2****************
+// // !! write a program that will keep running until the user clicks ok !!
+//
+/*
+var password = "";
+var guess = "";
+while(guess !== "") {
+  guess = prompt("Please press okay.");
+}
+*/
+
+
+// //**********WHILE PRACTICE 3****************
+// //create a function which puts on a coat if it's cold outside
+// //use a while loop
+
+/*function itsCold(temp) {
+  while (temp < 60) {
+    console.log("Put on a coat");
+    break;
+  }
+}*/
+/*Do while*/
+
+// //Create a function that makes your $100k Tesla speed until the police are looking
+/*
+function feelingSpeedy() {
+  let isSpeeding
+  do {
+    var response = prompt('Are you speeding ?');
+    if (response === "Yes")
+      isSpeeding = true
+    alert('The Police are not watching!');
+  }
+  while (isSpeeding)
+}
+
+*/
+
+/*Create a do-while loop that counts up to 20 (inclusive) by 2's (0,2,4,6)'*/
+
+/*
+let i =0;
+
+do {
+  console.log(i);
+  i += 2;
+} while (i <= 20)
+*/
+
+/*for loop*/
+/*for (var i = 0; i < 10; i++) {
+  console.log('for loop iteration #' + i);*/
+
+  for (var i=1; i < 101; i++){
+    if (i % 15 == 0) console.log("FizzBuzz");
+    else if (i % 3 == 0) console.log("Fizz");
+    else if (i % 5 == 0) console.log("Buzz");
+    else console.log(i);
+  }
+
+</script>
+</body>
+</html>
