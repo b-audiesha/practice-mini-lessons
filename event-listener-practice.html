@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sample Page</title>
+</head>
+<body>
+<button id = "me">Click Me!</button>
+<button id = "btn1">Remove Listener</button>
+<script>
+  "use strict";
+
+  var btn1 = document.getElementById('me')
+  var listenToMe = function (event){
+    alert('You clicked the button')
+  }
+  document.getElementById('me').addEventListener('click', listenToMe);
+  var btn2 = document.getElementById('2nd');
+  var removeEvent = function (event){
+    btn1.removeEventListener('click', listenToMe);
+    btn2.innerHTML = 'Event listener removed.'
+  }
+  btn2.addEventListener('click', removeEvent);
+
+  // or
+  // const btn = document.getElementById("me")
+  // function listenToME(event) {
+  //   btn.innerHTML = "You clicked me"
+  // }
+  //
+  // btn.addEventListener('click', listenToME)
+
+  // or
+
+  // var listenToMe = function (event){
+  //   document.getElementById('me').innerHTML = 'You clicked me.'
+  // }
+  // document.getElementById('me').addEventListener('click', listenToMe);
+
+
+
+
+</script>
+</body>
+</html>
