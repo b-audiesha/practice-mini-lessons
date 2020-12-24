@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<h2 id="count"></h2>
+<script>
+  // Write a webpage with an empty h2 element and a script that counts from 1 to 10, and puts the indexies from the loop into the element.
+  const heading = document.getElementById('count')
+
+  function countLine() {
+    let line = "";
+    // if you want a string or a variable that equals to 0/ if you put a return in a loop, it will never loop.
+    for(let i = 10; i > 0; i--) {
+      // let i be equal to 10. While i is greater than 0, i minus 1 every time it goes threw the loop.
+      line += `this is line #${i} <br>`
+      // concat without plus signs
+    }
+    // outside the loop is where you always put your return statment.
+    return heading.innerHTML = line
+  }
+  let countDown = setInterval(countLine,1000)
+
+</script>
+</body>
+</html>

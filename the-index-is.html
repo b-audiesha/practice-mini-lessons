@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sample Page</title>
+</head>
+<body>
+<h2 id="h2_1"></h2>
+<script>
+  "use strict";
+  (function() {
+    var output = ''
+    for (var i = 1; i < 11; i++) {
+      output += 'The index is: ' + i + '<br>'
+    }
+    let htag = document.getElementById('h2_1')
+    htag.innerHTML = output
+  })();
+</script>
+</body>
+</html>
