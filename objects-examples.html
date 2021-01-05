@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Objects Intro</title>
+</head>
+<body>
+
+<h1>Intro to Objects</h1>
+
+<script>
+  /*single object*/
+  let Monster = {
+    id: 1,
+    name: 'Monster',
+    type: 'Energy Drink',
+    priceInCents: 499,
+    valueInDollars: 4.99,
+    datesOfPreviousSips: 'yesteryear',
+    isOpen: 'Yes',
+    expirationDate: 'Never!'
+  }
+
+  console.log(Monster)
+  console.log(Monster.priceInCents);
+  console.log(Monster.valueInDollars);
+  console.log(Monster.datesOfPreviousSips);
+  console.log(Monster.isOpen);
+
+  /*to change the value of typer*/
+  /* Monster.type = 'Heart Killer'; {
+   }
+
+   console.log(Monster.type);*/
+
+  /*or*/
+  /*array of objects*/
+  let beverages = [
+    {
+      id: 1,
+      name: 'Monster',
+      type: 'Energy Drink',
+      priceInCents: 499,
+      valueInDollars: 4.99,
+      datesOfPreviousSips: 'yesteryear',
+      isOpen: 'Yes',
+      expirationDate: 'Never!'
+    },
+    {
+      id: 2,
+      name: 'Redbull',
+      type: 'Energy Drink',
+      priceInCents: 599,
+      valueInDollars: 5.99,
+      datesOfPreviousSips: 'yesteryear',
+      isOpen: 'No',
+      expirationDate: 'Never!'
+    },
+    {
+      id: 3,
+      name: 'Coffee',
+      type: 'Natural Caffeine',
+      priceInCents: 100,
+      valueInDollars: 1.00,
+      datesOfPreviousSips: 'yesteryear',
+      isOpen: 'Yes',
+      expirationDate: 'Never!'
+    },
+    {
+      id: 4,
+      name: 'Rockstar',
+      type: 'Energy Drink',
+      priceInCents: 499,
+      valueInDollars: 4.99,
+      datesOfPreviousSips: 'yesteryear',
+      isOpen: 'Yes',
+      expirationDate: 'Never!'
+    },
+    {
+      id: 5,
+      name: 'Mountain Dew',
+      type: 'Soda',
+      priceInCents: 199,
+      valueInDollars: 1.99,
+      datesOfPreviousSips: 'yesteryear',
+      isOpen: 'No',
+      expirationDate: 'Never!'
+    },
+  ];
+  /*for loop to print all*/
+  for (let i = 0; i < beverages.length; i += 1) {
+    console.log(beverages[i].name);
+  }
+  /*forEach to print all*/
+  beverages.forEach(function (beverages) {
+    console.log(beverages.name);
+  })
+
+
+  /*Or in an array*/
+  let beveragesArray = [
+    {
+      id: 1,
+      name: 'Monster',
+      type: 'Energy Drink',
+      priceInCents: 499,
+      valueInDollars: 4.99,
+      datesOfPreviousSips: 'yesteryear',
+      isOpen: 'Yes',
+      expirationDate: 'Never!'
+    },
+    {
+      id: 2,
+      name: 'Redbull',
+      type: 'Energy Drink',
+      priceInCents: 599,
+      valueInDollars: 5.99,
+      datesOfPreviousSips: 'yesteryear',
+      isOpen: 'No',
+      expirationDate: 'Never!'
+    },
+    {
+      id: 3,
+      name: 'Coffee',
+      type: 'Natural Caffeine',
+      priceInCents: 100,
+      valueInDollars: 1.00,
+      datesOfPreviousSips: 'yesteryear',
+      isOpen: 'Yes',
+      expirationDate: 'Never!'
+    },
+    {
+      id: 4,
+      name: 'Rockstar',
+      type: 'Energy Drink',
+      priceInCents: 499,
+      valueInDollars: 4.99,
+      datesOfPreviousSips: 'yesteryear',
+      isOpen: 'Yes',
+      expirationDate: 'Never!'
+    },
+    {
+      id: 5,
+      name: 'Mountain Dew',
+      type: 'Soda',
+      priceInCents: 199,
+      valueInDollars: 1.99,
+      datesOfPreviousSips: 'yesteryear',
+      isOpen: 'No',
+      expirationDate: 'Never!'
+    },
+  ];
+
+ /* console.log(Monster.type);*/
+
+  let users = [
+    {
+      givenName: 'Sam',
+      age: 21
+    },
+    {
+      givenName: 'Cathy',
+      age: 34
+    },
+    {
+      givenName: 'Karen',
+      age: 43
+    }
+  ]
+  /*Log the names of all users in a single console log separated by spaces.*/ // output = "Sam Cathy Karen"
+  console.log(users[0].givenName + ' ' + users[1].givenName + ' ' + users[2].givenName);
+
+  /*or*/
+
+  /* 2. Change the names of all users to "John Doe"*/
+
+  users.forEach(function (users) {
+    users.givenName = "John Doe"
+  });
+
+  console.log(users);
+
+  /*3. Increase the current age of all users by 1*/
+  users.forEach(function (users) {
+    users.age += 1
+  });
+
+  console.log(users[0].age);
+  console.log(users[1].age);
+  console.log(users[2].age);
+
+  /*Can you accomplish each step using iteration?*/
+  /*console.log(beverages)*/
+
+
+</script>
+
+
+</body>
+</html>
