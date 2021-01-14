@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Flexbox Basics Examples</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Helvetica;
+            font-weight: bold;
+        }
+
+        .flex-container {
+            width: 100%;
+            border: 3px solid goldenrod;
+            display: flex; /*this is setting display flex to flex container*/
+          /*flex-direction: column;*/ /*up and down*/
+          /*flex-direction: row-reverse;*/ /*items are the same but direction reverses itself right to left.
+         */
+          /*flex-direction: column-reverse;*//*bottom to top*/
+
+          /*flex-direction: row; +
+          justify-content: flex-start;*//* & end are at the beginning and the beggining and end*/
+
+         /* justify-content: space-between; space between items */
+          /*justify-content: space-around;*/ /*even space around, begins with an empty space use these Justify contents when also using flex direction row/column */
+
+           /* You can add additional properties here such as...flex direction row or flex direction column (which stacks on top of one another */
+          flex-direction: row;
+          /*justify-content: center;*/ /*centers flex items*/
+          align-items: flex-start; height: 500px; /*if you dont set a value, it will stretch along the cross access*/
+        }
+
+
+        .flex-item {
+            background: #BFD45D;
+            border: 2px solid #F9EFD6;
+            padding: 1em;
+            /*You can add additional properties here such as...*/
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="flex-container"> <!--set display flex to flex container-->
+        <div class="flex-item">child-1</div> <!--a child of a flex container is a flex item-->
+        <div class="flex-item">child-2</div>
+        <div class="flex-item">child-3</div>
+    </div>
+
+</body>
+
+</html>
