@@ -1,0 +1,192 @@
+
+* {
+  box-sizing: border-box;
+  font-family: 'Anonymous Pro', monospace;
+  margin: 0;
+}
+
+hr {
+  display: none;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  height: 5em;
+  background-color: #0fb784;
+  color: whitesmoke;
+  position: relative;
+  padding: 3px;
+  border-bottom: #373fff 3px solid;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+
+li {
+  display: inline-block;
+  margin: .4em;
+}
+
+a {
+  text-decoration: none;
+  color: whitesmoke;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+a:hover {
+  color: #373fff;
+}
+
+main h2 {
+  font-size: 4em;
+}
+
+h2 > a {
+  font-size: 2.2em;
+  position: absolute;
+  top: 50%; /* position the top  edge of the element at the middle of the parent */
+  left: 50%; /* position the left edge of the element at the middle of the parent */
+  transform: translate(-50%, -50%);
+  /* This is a shorthand of
+               translateX(-50%) and translateY(-50%) */
+  font-family: 'Fugaz One', cursive;
+  text-shadow: 3px 3px #373fff;
+}
+
+h2 > a:hover {
+  text-shadow: -3px -3px whitesmoke;
+}
+
+i {
+  font-size: 2em;
+  margin-right: 8px;
+}
+
+.big-title {
+  display: block;
+}
+
+.small-title, .smallest-title {
+  display: none;
+}
+
+main {
+  margin: 5px 10vw;
+}
+
+.pixel {
+  width: 100%;
+  height: auto;
+}
+
+div {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#side-story {
+  width: 35%;
+  order: 1;
+}
+
+#main-story {
+  width: 65%;
+  order: 2;
+}
+
+article {
+  overflow: auto;
+  height: 128px;
+}
+
+@media screen and (max-width: 1368px) {
+  .small-title {
+    display: block;
+  }
+
+  .big-title {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1186px) {
+  .small-title {
+    display: none;
+  }
+
+  .smallest-title {
+    display: block;
+  }
+
+  main h2 {
+    font-size: 3em;
+  }
+
+  section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  section > * {
+    display: inline-block;
+  }
+
+  #side-story, #main-story {
+    width: 100%;
+    /*order: 1;*/
+  }
+
+  hr {
+    display: block;
+  }
+
+  article {
+    margin: 10px 0;
+  }
+}
+
+@media screen and (max-width: 1062px) {
+  .smallest-title {
+    display: none;
+  }
+
+  #to-what {
+    display: none;
+  }
+
+  main h2 {
+    font-size: 2.5em;
+  }
+
+  main h2:after {
+    content: "Stegosaurus Rx!"
+  }
+}
+
+@media screen and (max-width: 802px) {
+  main h2 {
+    font-size: 1.75em;
+  }
+
+  nav > ul:last-child {
+    display: none;
+  }
+
+  nav {
+    justify-content: center;
+  }
+
+  article {
+    height: 178px;
+  }
+}
