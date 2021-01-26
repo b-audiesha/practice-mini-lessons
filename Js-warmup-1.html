@@ -9,34 +9,83 @@
 <script>
   "use strict";
 
-/*
-  Create a function, returnUserFirstLetters, that takes in array of user objects and returns a string of the first letters in lowercase of all the user firstName property values.
+  /*
+    Create a function, returnUserFirstLetters, that takes in array of user objects and returns a string of the first letters in lowercase of all the user firstName property values.
 
-  Example:*/
+    Example:*/
+  /*
+    let userArr = [
+      {
+        age: 24,
+        firstName: 'John'
+      },
+      {
+        age: 43,
+        firstName: 'Cathy'
+      },
+      {
+        age: 65,
+        firstName: 'Bob'
+      }
+    ];
 
-  let userArr = [
-    {
-      age: 24,
-      firstName: 'John'
-    },
-    {
-      age: 43,
-      firstName: 'Cathy'
-    },
-    {
-      age: 65,
-      firstName: 'Bob'
+    function returnUserFirstLetters(userArr) {
+      var output = "";
+      for (var i = 0; i < userArr.length; i+=1 ) {
+        output += userArr[i].firstName.charAt(0).toLowerCase();
+      }
+      return output
     }
-  ];
+  console.log(returnUserFirstLetters(userArr));*/
 
-  function returnUserFirstLetters(userArr) {
-    var output = "";
-    for (var i = 0; i < userArr.length; i+=1 ) {
-      output += userArr[i].firstName.charAt(0).toLowerCase();
+  /*create a function that returns the number 7*/
+
+  /* let x = 7;
+
+   function returnSeven(x) {
+     return 7;
+   }
+
+   console.log(returnSeven(x));*/
+/*  (function () {
+    function returnSeven(x) {
+      return 7;
     }
-    return output
+  })();*/
+
+  /*console.log(returnSeven(x));*/
+
+
+/*takes in two numbers and returns a boolean and determinds whether the second number is divisable by the first number. If its not a number should pass false*/
+/*  function evenlyDivisible(a, b) {
+    return (b % a) === 0;
   }
-console.log(returnUserFirstLetters(userArr));
+
+  console.log(evenlyDivisible(6, 2));
+  console.log(evenlyDivisible(6, 'orange'));
+  console.log(evenlyDivisible(2, 6));*/
+
+  let array = ['Where', 'the ','wild ','things', 'are']
+  function theArray() {
+    let first = array[0];
+    let last = array[array.length-1];
+    document.write("First element is, " + first +  " The Last element is "+ last);
+  }
+/*
+theArray();
+/!*or*!/
+function firstLastOfArr(arr) {
+    var bucket = [];
+    bucket.push(arr[0]);
+    bucket.push(arr[arr.length - 1]);
+    return bucket
+}
+
+*/
+
+
+
+
 </script>
 
 </body>
