@@ -145,3 +145,12 @@
   addClickEvents(jqElements);
 
 })()
+
+/*Keyboard Events*/
+
+$('input').keyup(function(e){
+  console.log(this.value);
+  if(this.value=== "Audi") {
+    alert("May I grant you three wishes ?")
+  }
+})

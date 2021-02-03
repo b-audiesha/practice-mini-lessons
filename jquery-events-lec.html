@@ -57,61 +57,130 @@
           </table>
         </div>
 
+        <div class="container">
+          <h1>Mouse Events</h1>
+          <div class="click">
+            .click()
+            Bind an event handler to the “click” JavaScript event, or trigger that event on an element.
+          </div>
+          <br>
 
-        <div class="click">
-          .click()
-          Bind an event handler to the “click” JavaScript event, or trigger that event on an element.
-        </div><br>
+          <div class="contextmenu">
+            .contextmenu()
+            Bind an event handler to the “contextmenu” JavaScript event, or trigger that event on an element.
+          </div>
+          <br>
+          <div class="dblclick">
+            .dblclick()
+            Bind an event handler to the “dblclick” JavaScript event, or trigger that event on an element.
+          </div>
+          <br>
+          <div class="hover">
+            .hover()
+            Bind one or two handlers to the matched elements, to be executed when the mouse pointer enters and leaves
+            the
+            elements.
+          </div>
+          <br>
+          <div class="mousedown">
+            .mousedown()
+            Bind an event handler to the “mousedown” JavaScript event, or trigger that event on an element.
+          </div>
+          <br>
+          <div class="mouse-enter">
+            .mouseenter()
+            Bind an event handler to be fired when the mouse enters an element, or trigger that handler on an element.
+          </div>
+          <br>
 
-        <div class="contextmenu">
-          .contextmenu()
-          Bind an event handler to the “contextmenu” JavaScript event, or trigger that event on an element.
+          <div class="mouseleave">
+            .mouseleave()
+            Bind an event handler to be fired when the mouse leaves an element, or trigger that handler on an element.
+          </div>
+          <br>
+          .mousemove()
+          Bind an event handler to the “mousemove” JavaScript event, or trigger that event on an element.
+          <br>
+          <div class="mouseout">
+            .mouseout()
+            Bind an event handler to the “mouseout” JavaScript event, or trigger that event on an element.
+          </div>
+          <br>
+          <div class="mouseover">
+            .mouseover()
+            Bind an event handler to the “mouseover” JavaScript event, or trigger that event on an element.
+          </div>
+          <br>
+          <div class="mouseup">
+            .mouseup()
+            Bind an event handler to the “mouseup” JavaScript event, or trigger that event on an element.
+          </div>
         </div>
-        <br>
-        <div class="dblclick">
-          .dblclick()
-          Bind an event handler to the “dblclick” JavaScript event, or trigger that event on an element.
-        </div>
-        <br>
-        <div class="hover">
-          .hover()
-          Bind one or two handlers to the matched elements, to be executed when the mouse pointer enters and leaves the
-          elements.
-        </div>
-        <br>
-        <div class="mousedown">
-          .mousedown()
-          Bind an event handler to the “mousedown” JavaScript event, or trigger that event on an element.
-        </div>
-        <br>
-        <div class="mouse-enter">
-          .mouseenter()
-          Bind an event handler to be fired when the mouse enters an element, or trigger that handler on an element.
-        </div>
-        <br>
 
-        <div class="mouseleave">
-          .mouseleave()
-          Bind an event handler to be fired when the mouse leaves an element, or trigger that handler on an element.
+
+        <div class="container">
+          <h1>Keyboard Events</h1>
+          <div class="keydown">
+            .keydown()
+            Bind an event handler to the “keydown” JavaScript event, or trigger that event on an element.
+          </div>
+          <br>
+          <div class="keypress">
+            .keypress()
+            Bind an event handler to the “keypress” JavaScript event, or trigger that event on an element.
+          </div>
+          <br>
+          <div class="keyup">
+            .keyup()
+            Bind an event handler to the “keyup” JavaScript event, or trigger that event on an element.
+          </div><!---->
+          <div class="keydown">
+            .on()
+            All the jQuery events we have covered so far can also be listened to using the .on() method. This method
+            takes the event listener type and a callback function.
+
+            To use a keyboard event, like keydown the syntax would be:
+          </div>
+          <br>
+          <div class="keydown">
+            .on('keydown', function() {});
+            We can use any of the events we have covered thus far as the first argument to .on.
+          </div>
+          <br>
+          <div class="keydown">
+            .off()
+            The .off method removes event listeners from a specified element or elements. We can use it to remove event
+            listeners for a specific event or all the event listeners.
+
+            Remove any handlers for the click event from all elements with the class clickable
+          </div>
+          <br>
+
+
         </div>
-        <br>
-        .mousemove()
-        Bind an event handler to the “mousemove” JavaScript event, or trigger that event on an element.
-        <br>
-        <div class="mouseout">
-          .mouseout()
-          Bind an event handler to the “mouseout” JavaScript event, or trigger that event on an element.
-        </div>
-        <br>
-        <div class="mouseover">
-          .mouseover()
-          Bind an event handler to the “mouseover” JavaScript event, or trigger that event on an element.
-        </div>
-        <br>
-        <div class="mouseup">
-          .mouseup()
-          Bind an event handler to the “mouseup” JavaScript event, or trigger that event on an element.
-        </div>
+
+
+        <main class=container>
+          <hr>
+          <section class="row">
+            <div class="col">
+              <h2>"Say My Name and Summon the Genie</h2>
+              <form action="" method="POST" name="user">
+                <div class="form-group">
+                  <label for="first">Whats My Name?</label>
+                  <input class="form-control" type="text" name="first" id="first" placeholder="Enter First Name">
+                </div>
+                <div class="form-group">
+                  <label for="last">One More Time</label>
+                  <input class="form-control" type="text" name="last" id="last" placeholder="Enter Last Name">
+                </div>
+                <button type="button" class="btn btn-primary btn-block" id="submitBtn">Submit</button>
+              </form>
+            </div>
+          </section>
+        </main>
+
+
         <script src="js/jquery-3.5.1.js"></script>
         <script src="js/jquery-mouse-events.js"></script>
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
