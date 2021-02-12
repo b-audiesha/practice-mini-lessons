@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+  body {
+    background-color: rgba(0,0,0,0.1);
+  }
+  /* styling paper */
+  #paper {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    margin: 20px auto;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    background-color: white;
+    box-shadow: 0px 0px 5px 0px #888;
+  }
+
+  /* styling red vertical line */
+  #paper::before {
+    content: '';
+    width: 2px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 40px;
+    background-color: rgba(255,0,0,0.6);
+  }
+
+  /* styling blue horizontal lines */
+  #pattern {
+    height: 100%;
+    background-image: repeating-linear-gradient(white 0px, white 24px, teal 25px);
+  }
+
+  /* styling text content */
+  #content {
+    padding-top: 6px;
+    padding-left: 56px;
+    padding-right: 16px;
+    line-height: 28px;
+    font-size: 16px;
+    letter-spacing: 1px;
+    word-spacing: 5px;
+    font-family: 'Oswald', sans-serif;
+  }
+
+</style>
+<body>
+<div id="paper">
+  <div id="pattern">
+    <div id="content">
+# ES5 vs. ES6 Syntax Guide<br>
+
+### Exponentiation - shorthand for raising a number to a power<br>
+
+Raising a four to the second power:<br>
+
+ES5<br>
+
+```<br>
+Math.pow(4, 2)<br>
+```<br>
+
+ES6<br>
+
+```<br>
+4**2<br>
+```<br>
+
+### Variable Declarations - new keywords with block scope<br>
+
+Defining a variable:
+
+ES5<br>
+
+```<br>
+var some<br>
+
+ES6<br>
+
+```<br>
+let someValue;
+// or<br>
+const someValue;
+```<br>
+
+### Template Strings - shorthand for concatenating strings<br>
+
+Combining the strings "hello" and "world":<br>
+
+ES5<br>
+
+```<br>
+var hello = "hello";<br>
+var world = "world";<br>
+var str = hello + " " + world;<br>
+```
+
+ES6<br>
+
+```
+const hello = "hello";<br>
+const world = "world";<br>
+const str = `${hello} ${world`;<br>
+```<br>
+
+### For...Of Loop - a newer loop that can iterate over DOM nodes<br>
+
+Logging the inner text of all divs (nodelist):<br>
+
+ES5<br>
+
+```<br>
+const divs = document.querySelectorAll('div');<br>
+for (var i = 0; i < divs.length; i += 1) {<br>
+console.log(divs[0].innerText);<br>
+}<br>
+```<br>
+
+ES6<br>
+
+```<br>
+const divs = document.querySelectorAll('div');<br>
+for (let div of divs) {<br>
+console.log(div.innerText);<br>
+}<br>
+```<br>
+
+### Arrow Functions - shorthand for writing function expressions<br>
+
+Defining a function expression that simply returns a given input:<br>
+
+ES5<br>
+
+```<br>
+var returnInput = function(input) {<br>
+return input;<br>
+}<br>
+returnInput(4); // returns 4<br>
+```<br>
+
+ES6<br>
+
+```<br>
+const returnInput = input => input;<br>
+returnInput(4); // returns 4<br>
+```<br>
+
+### Default Parameters Values - shorthand for defining default parameter values<br>
+
+Defining a log function that will log "hello" if no defined input:<br>
+
+ES5<br>
+
+```<br>
+var log = function(input) {<br>
+if (input === undefined) {<br>
+input = "hello";<br>
+}<br>
+console.log(input);<br>
+};<br>
+log(); // logs "hello"<br>
+```<br>
+
+ES6<br>
+
+```<br>
+const log = (input = "hello") => {<br>
+console.log(input);<br>
+}<br>
+```<br>
+
+### Object Assignment - shorthand for building an object from variables<br>
+
+Creating an object from a first and last name variable:<br>
+
+ES5<br>
+
+```<br>
+var first = "bob";<br>
+var last = "smith";<br>
+var name = {<br>
+first: first,<br>
+last: last<br>
+};<br>
+```<br>
+
+ES6<br>
+
+```
+const first = "bob";<br>
+const last = "smith";<br>
+const name = {<br>
+first,<br>
+last<br>
+};<br>
+```<br>
+
+### Destructuring - shorthand for creating variables from an object or array<br>
+
+Creating variables from object:<br>
+
+ES5<br>
+
+```<br>
+var name = {<br>
+first: "bob",<br>
+last: "smith"<br>
+};<br>
+var first = name.first;<br>
+var last = name.last;<br>
+console.log(first + " " + last);<br>
+```<br>
+
+ES6<br>
+
+```<br>
+const name = {<br>
+first: "bob",<br>
+last: "smith"<br>
+};<br>
+const { first, last } = name;<br>
+console.log(`${first} ${last}`);<br>
+```<br>
+    </div>
+  </div>
+</div>
+</body>
+</html>
