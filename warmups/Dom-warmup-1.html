@@ -13,23 +13,45 @@
 <button id="add-btn">Add</button>
 
 <!--  Include the CDN script for jQuery below -->
-<script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+        crossorigin="anonymous"></script>
 <script>
   "use strict";
 
   // TODO: add the needed JS so that the number selected in the number input will be added to the number in the span
 
+  // $(":input").click('#add-btn', function () {
+  //   var number = ('#name').val();
+  //   var adding =$("#sum-output").text());
+  //   $('#sum-output').text();
+  // });
+  //
+  // function sumNumbers(num1, num2) {
+  //   return num1 + num2;
+  // }
+  //
+  // $('#add-btn').on('click', function () {
+  // var inputValue = Number($("#number").val());
+  // var sumOutput = $('#sum-output');
+  // var number = Number(sumOutput.text());
+  // var sum = sumNumbers(inputValue, number);
+  // The text to set as the content of each matched element. When Number or Boolean is supplied, it will be converted to a String representation. Can use to get the text from span or p tag.
+  // console.log(inputValue);
+  // console.log(number);
+  // sumOutput.text(sum);
 
-  $(":input").click('#add-btn', function () {
-    var number = ('#name').val();
-    var adding = parseFloat($("#sum-output").text());
-    $('#sum-output').text();
+  // });
+
+
+  document.getElementById('add-btn').addEventListener('click', function (event) {
+    var inputValue = document.querySelector('#number').value;
+    var sumOutput = document.querySelector('#sum-output');
+    var number = document.querySelector('#sum-output').innerText;
+    sumOutput.innerText = (parseInt(inputValue) + parseInt(number));
   });
 
-  $(":input").bind('keyup mouseup', function () {
-    var coins = $("#coins").val();
-    $("#reward").text(coins);
-  });
+
+
 </script>
 
 </body>
