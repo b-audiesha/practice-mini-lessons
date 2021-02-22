@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+// function declaration
+function addOne(arg1) {
+return arg1 + 1;
+}
+
+// original function expression //
+//
+const addOneA = function (arg1) {
+return arg1 + 1;
+};
+// refactor to use arrow
+
+const addOneB = (arg1) => {
+return arg1 + 1;
+};
+const addOneC = (arg1) => arg1 + 1;
+   <script>
+// original function expression //
+    // function isShortWord(x) {
+    //     return x.length < 5;
+    // }
+
+const isShortWord = (x) => x.length < 5;
+console.log(isShortWord("awe"));
+
+//original function expression 
+    // function isSameLength(str1, str2) {
+    //     return str1.length == str2.length;
+    // }
+ const isSameLength = (str1,str2) => str1.length == str2.length ;
+    console.log(isSameLength("hello", "world"));
+    console.log(isSameLength("awkward", "world"));
+
+    //original function expression 
+    // function getSmallerSegment(str, num) {
+    //     return str.substring(num).toLowerCase();
+    // }
+    
+const getSmallerSegment = (str,num) => str.substring(num).toLowerCase();
+    console.log(getSmallerSegment("CHALLENGE", 4));
+
+
+    //original function expression 
+ var x = 300;
+    var y = 100;
+
+    function scopeExample(x, y) {
+        var x = 1;
+        var y = 2;
+        console.log('x: ' + X + "y" + y);
+    }
+   
+
+
+
+   </script> 
+</body>
+</html>
