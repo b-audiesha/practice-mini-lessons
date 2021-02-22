@@ -44,15 +44,12 @@
 
 
   document.getElementById('add-btn').addEventListener('click', function (event) {
-    var inputValue = document.querySelector('#number').value;
-    var sumOutput = document.querySelector('#sum-output');
-    var number = document.querySelector('#sum-output').innerText;
+    let inputValue = document.querySelector('#number').value;
+    let sumOutput = document.querySelector('#sum-output');
+    let number = document.querySelector('#sum-output').innerText;
     sumOutput.innerText = (parseInt(inputValue) + parseInt(number));
   });
 
-
-
 </script>
-
 </body>
 </html>
