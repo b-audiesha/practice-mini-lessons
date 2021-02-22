@@ -40,18 +40,19 @@
 
   // TODO: add the needed JS so that the number selected in the number input will be added to the number in the span
 
-  $('#add-btn').click(function() {
-    var numVal = parseInt($('#number').val());
-    var currVal = parseInt($('#sum-output').text());
-    $('#sum-output').text(numVal + currVal);
-  });
+  // $('#add-btn').click(function() {
+  //   var numVal = parseInt($('#number').val());
+  //   var currVal = parseInt($('#sum-output').text());
+  //   $('#sum-output').text(numVal + currVal);
+  // });
 
 
-  $('.letter').hover(function () {
-    let letterLowerCase = $(this).text().toLowerCase();
-    $(".title-letter").html(letterLowerCase);
-  });
-
+   document.getElementById('add-btn').addEventListener('click', function (event) {
+      let inputValue = document.querySelector('#number').value;
+      let sumOutput = document.querySelector('#sum-output');
+      let number = document.querySelector('#sum-output').innerText;
+      sumOutput.innerText = (parseInt(inputValue) + parseInt(number));
+    });
 
 
   /*
@@ -61,8 +62,14 @@
    displayed in the span with a class of `title-letter`.
   */
 
-
-
+  $('.letter').hover(function () {
+    let letterLowerCase = $(this).text().toLowerCase();
+    $(".title-letter").html(letterLowerCase);
+  },
+    function () {
+      $(".title-letter").html(''); //this function helps to clear out the input when the mouse leaves the hover area. 
+    }
+  );
 
 </script>
 
