@@ -58,7 +58,11 @@ const getSmallerSegment = (str,num) => str.substring(num).toLowerCase();
         var y = 2;
         console.log('x: ' + X + "y" + y);
     }
-   
+   var word = 'hello';
+
+    function shoutWord() {     /*pure function this does not change the global variable*/
+        return word.toUpperCase();
+    }
 
 
 
