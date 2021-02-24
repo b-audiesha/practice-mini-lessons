@@ -64,16 +64,16 @@
 
   console.log(getCake); // promise object
 
-  // // Handling a promise (defining what will happen when either resolved or rejected)
-  // getCake.then((data) => {
-  //     console.log(data);
-  // }).catch((err) => {
-  //     console.log(err);
-  // });
+  // Handling a promise (defining what will happen when either resolved or rejected)
+  getCake.then((data) => {
+      console.log(data);
+  }).catch((err) => {
+      console.log(err);
+  });
 
   // -------- MINI EXERCISE 1
 
-  // const isGoodDog = true;
+  const isGoodDog = true;
 
   /* TODO: Uncomment the line above then create a promise, haveTreat, that resolves with the string 'Good dog; have treat'
       if the above constant is assigned to true and and rejects with the string 'Bad dog; no treat' if assigned false.
@@ -110,14 +110,14 @@
 
   // ============ Fetch API
 
-  // jQuery AJAX request example
-  // $.ajax('https://swapi.co/api/people/1')
-  //     .done(function(data) {
-  //         console.log(data);
-  //     })
-  //     .fail(function(jqXHR, message) {
-  //         console.log(message);
-  //     });
+  jQuery AJAX request example
+  $.ajax('https://swapi.co/api/people/1')
+      .done(function(data) {
+          console.log(data);
+      })
+      .fail(function(jqXHR, message) {
+          console.log(message);
+      });
 
   // Fetch API Version...
 
@@ -133,18 +133,18 @@
 
   // Fetch API POST example
 
-  // fetch('https://hookb.in/eKZ0mV6k1aTr9g86Q7JM', {
-  //     method: 'POST',
-  //     headers: {
-  //         'Content-Type': 'application/json'
-  //     },
-  //     body: JSON.stringify({
-  //         username: "bill",
-  //         password: "pass123"
-  //     })
-  // })
-  //     .then(console.log)
-  //     .catch(console.log);
+  fetch('https://hookb.in/eKZ0mV6k1aTr9g86Q7JM', {
+      method: 'POST',
+      headers: {
+          'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+          username: "bill",
+          password: "pass123"
+      })
+  })
+      .then(console.log)
+      .catch(console.log);
 
 
   // -------- MINI EXERCISE 4
@@ -168,50 +168,50 @@
 
   //  ============ NY Times Articles Based on Forecast of Current Location
 
-  // function getForecast(coord) {
-  //     return fetch(`https://cors-anywhere.herokuapp.com/https://api.darksky.net/forecast/${darkSkyAPI}/${coord.lat},${coord.lng}`)
-  //         .then(res => res.json())
-  // }
-  //
-  //
-  // function getCurrentLocation() {
-  //     return new Promise(function(res, rej) {
-  //         navigator.geolocation.getCurrentPosition(function(pos) {
-  //             res({"lat": pos.coords.latitude, "lng": pos.coords.longitude});
-  //         });
-  //     });
-  // }
-  //
-  // function getLocalForecast() {
-  //     return getCurrentLocation()
-  //         .then(getForecast)
-  // }
-  //
-  // function getNYTimesArticle(search) {
-  //     const apiKey = apiKeyNYT;
-  //     return fetch(`https://api.nytimes.com/svc/search/v2/articlesearch.json?q=${search}&api-key=${apiKey}`)
-  //         .then(res => res.json());
-  // }
-  //
-  // function buildWeatherHtml(articles) {
-  //     return articles.reduce((accum, curr) => {
-  //         return accum += `
-  //             <article>
-  //                 <a href="${curr.web_url}">${curr.headline.main}</a>
-  //             </article>
-  //         `
-  //     }, "");
-  // }
-  //
-  // getLocalForecast()
-  //     .then(forecast => {
-  //         console.log(forecast.currently.summary);
-  //         return forecast.currently.summary
-  //     })
-  //     .then(getNYTimesArticle)
-  //     .then(data => {
-  //         document.getElementById("articles").innerHTML = buildWeatherHtml(data.response.docs);
-  //     });
+  function getForecast(coord) {
+      return fetch(`https://cors-anywhere.herokuapp.com/https://api.darksky.net/forecast/${darkSkyAPI}/${coord.lat},${coord.lng}`)
+          .then(res => res.json())
+  }
+  
+  
+  function getCurrentLocation() {
+      return new Promise(function(res, rej) {
+          navigator.geolocation.getCurrentPosition(function(pos) {
+              res({"lat": pos.coords.latitude, "lng": pos.coords.longitude});
+          });
+      });
+  }
+  
+  function getLocalForecast() {
+      return getCurrentLocation()
+          .then(getForecast)
+  }
+  
+  function getNYTimesArticle(search) {
+      const apiKey = apiKeyNYT;
+      return fetch(`https://api.nytimes.com/svc/search/v2/articlesearch.json?q=${search}&api-key=${apiKey}`)
+          .then(res => res.json());
+  }
+  
+  function buildWeatherHtml(articles) {
+      return articles.reduce((accum, curr) => {
+          return accum += `
+              <article>
+                  <a href="${curr.web_url}">${curr.headline.main}</a>
+              </article>
+          `
+      }, "");
+  }
+  
+  getLocalForecast()
+      .then(forecast => {
+          console.log(forecast.currently.summary);
+          return forecast.currently.summary
+      })
+      .then(getNYTimesArticle)
+      .then(data => {
+          document.getElementById("articles").innerHTML = buildWeatherHtml(data.response.docs);
+      });
 
 
 
@@ -219,65 +219,65 @@
 
   // ============ Promise Chaining
 
-  // function countSlow(count) {
-  //     return new Promise(function(res) {
-  //         setTimeout(function() {
-  //             console.log(count);
-  //             res(++count);
-  //         }, 500);
-  //     });
-  // }
-  //
-  // countSlow(1)
-  //     .then(countSlow)
-  //     .then(countSlow)
-  //     .then(countSlow)
-  //     .then(countSlow);
+  function countSlow(count) {
+      return new Promise(function(res) {
+          setTimeout(function() {
+              console.log(count);
+              res(++count);
+          }, 500);
+      });
+  }
+  
+  countSlow(1)
+      .then(countSlow)
+      .then(countSlow)
+      .then(countSlow)
+      .then(countSlow);
 
 
 
   // ============ Promise.resolve() and Promise.reject()
 
-  // Promise.resolve('one').then((one) => {
-  //     console.log(one);
-  //     return 'two';
-  // }).then((two) => {
-  //     console.log(two);
-  //     return 'three';
-  // }).then((three) => {
-  //     console.log(three);
-  // });
+  Promise.resolve('one').then((one) => {
+      console.log(one);
+      return 'two';
+  }).then((two) => {
+      console.log(two);
+      return 'three';
+  }).then((three) => {
+      console.log(three);
+  });
 
 
   // ============ Promise.all()
 
   // // Getting a coffee is a great example of how two interdependent asynchronous actions that can be handled with promises.
   //
-  // const getCoffee = (type) => {
-  //
-  //     const orderAndPay = new Promise((resolve, reject) => {
-  //         setTimeout(function() {
-  //             resolve(`Coffee of type ${type} has been ordered and paid for!`);
-  //         }, 2000);
-  //     });
-  //
-  //     const makeOrder = new Promise((resolve, reject) => {
-  //         setTimeout(function() {
-  //             resolve(`Coffee of type ${type} is ready!`);
-  //         }, 4000);
-  //     });
-  //
-  //     return Promise.all([orderAndPay, makeOrder]);
-  //
-  // };
-  //
-  // getCoffee("espresso").then((data) => {
-  //     console.log(data[0]);
-  //     console.log(data[1]);
-  //     console.log("You now have a coffee!");
-  // }).catch((err) => {
-  //     console.log(err)
-  // });
+  const getCoffee = (type) => {
+  
+      const orderAndPay = new Promise((resolve, reject) => {
+          setTimeout(function() {
+              resolve(`Coffee of type ${type} has been ordered and paid for!`);
+          }, 2000);
+      });
+  
+      const makeOrder = new Promise((resolve, reject) => {
+          setTimeout(function() {
+              resolve(`Coffee of type ${type} is ready!`);
+          }, 4000);
+      });
+  
+      return Promise.all([orderAndPay, makeOrder]);
+  
+  };
+  
+  getCoffee("espresso").then((data) => {
+      console.log(data[0]);
+      console.log(data[1]);
+      console.log("You now have a coffee!");
+  }).catch((err) => {
+      console.log(err)
+  });
 
 
 
