@@ -7,6 +7,7 @@
     .letter {
       cursor: crosshair;
     }
+
     .title-letter {
       color: firebrick;
       font-size: 3em;
@@ -29,6 +30,13 @@
 <input id="number" type="number" name="number" min="0" max="5" value="0">
 <button id="add-btn">Add</button>
 
+<hr>
+
+<ul class="bg-colors">
+  <li>Red</li>
+  <li>Green</li>
+  <li>Blue</li>
+</ul>
 <!--  Include the CDN script for jQuery below -->
 <script
   src="http://code.jquery.com/jquery-2.2.4.min.js"
@@ -47,12 +55,12 @@
   // });
 
 
-   document.getElementById('add-btn').addEventListener('click', function (event) {
-      let inputValue = document.querySelector('#number').value;
-      let sumOutput = document.querySelector('#sum-output');
-      let number = document.querySelector('#sum-output').innerText;
-      sumOutput.innerText = (parseInt(inputValue) + parseInt(number));
-    });
+  document.getElementById('add-btn').addEventListener('click', function (event) {
+    let inputValue = document.querySelector('#number').value;
+    let sumOutput = document.querySelector('#sum-output');
+    let number = document.querySelector('#sum-output').innerText;
+    sumOutput.innerText = (parseInt(inputValue) + parseInt(number));
+  });
 
 
   /*
@@ -63,13 +71,31 @@
   */
 
   $('.letter').hover(function () {
-    let letterLowerCase = $(this).text().toLowerCase();
-    $(".title-letter").html(letterLowerCase);
-  },
+      let letterLowerCase = $(this).text().toLowerCase();
+      $(".title-letter").html(letterLowerCase);
+    },
     function () {
-      $(".title-letter").html(''); //this function helps to clear out the input when the mouse leaves the hover area. 
+      $(".title-letter").html(''); //this function helps to clear out the input when the mouse leaves the hover area.
     }
   );
+  /*$('.letter').hover(
+    function() {
+      var letter = $(this).text().toLowerCase();
+      $('.title-letter').text(letter);
+    },
+    function() {
+      $('.title-letter').text('');
+    }
+    );*/
+
+  /*
+            TODO: When an li in the ul with a class of `bg-colors` is double-clicked,
+             the background color of the page will change to the li's inner text
+         */
+ $('.bg-colors li').dblclick(function (e) {
+   const color = $(e.target).text();
+   $('body').css('background-color', color);
+ });
 
 </script>
 
