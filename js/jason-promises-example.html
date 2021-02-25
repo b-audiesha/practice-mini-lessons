@@ -1,10 +1,61 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>$Title$</title>
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
 </head>
 <body>
-$END$
+<script>
+  // const ghibliUrl = "https://ghibliapi.herokuapp.com/films/58611129-2dbc-4a81-a72f-77ddfc1b1b49"
+
+  // async function getData(url = '') {
+  //   const response = await fetch(url , {
+  //     method: 'GET',
+  //     mode: 'cors',
+  //     headers: {
+  //       'Content-Type': 'application/json'
+  //     }
+  //   })
+  //   if(response.ok) return response.json()//?
+  // }
+
+
+
+  // getData(ghibliUrl).then(data => console.log(data))//?
+
+  const ghibliUrl = "https://ghibliapi.herokuapp.com/films/58611129-2dbc-4a81-a72f-77ddfc1b1b49"
+
+  async function getData(url = '') {
+
+    const response = await fetch(url)
+    if (response.ok) return response.json()//?
+  }
+
+  function showMovieTitle(data) {
+    console.log(data)
+    const movieTitle = data.title
+    document.querySelector("#app").insertAdjacentHTML('beforeend', movieTitle);
+    return data;
+  }
+
+  function showProducer(data) {
+    console.log(data)
+    const movieProducer = data.producer
+    document.querySelector("#app").insertAdjacentHTML('beforeend', movieProducer);
+    return data;
+  }
+
+  // getData(ghibliUrl).then(data => console.log(data))//?
+  getData(ghibliUrl)
+    .then(showMovieTitle)
+    .then(showProducer)
+    .catch(console.error)//?
+
+// getData("https://ghibliapi.herokuapp.com/films/58611129-2dbc-4a81-a72f-77ddfc1b1b49")//?
+  //https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch
+</script>
 </body>
 </html>
